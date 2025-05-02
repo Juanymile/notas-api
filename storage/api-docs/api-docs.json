@@ -1,0 +1,77 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Laravel API",
+        "description": "This is the API documentation for my Laravel 12 app",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://my-default-host.com",
+            "description": "API Server"
+        }
+    ],
+    "paths": {
+        "/api/notes": {
+            "get": {
+                "tags": [
+                    "Notas"
+                ],
+                "summary": "Get list of notes",
+                "operationId": "6c45db5a9c3113cbf88aa6ef66de84cf",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/notas": {
+            "post": {
+                "tags": [
+                    "Notas"
+                ],
+                "summary": "Crear una nueva nota",
+                "operationId": "91655f1127c90d770ad401f63049fae9",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "titulo",
+                                    "contenido"
+                                ],
+                                "properties": {
+                                    "titulo": {
+                                        "type": "string",
+                                        "example": "Mi nota"
+                                    },
+                                    "contenido": {
+                                        "type": "string",
+                                        "example": "Este es el contenido"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Nota creada exitosamente"
+                    },
+                    "400": {
+                        "description": "Error de validación"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Notas",
+            "description": "Notas"
+        }
+    ]
+}
