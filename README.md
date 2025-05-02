@@ -59,3 +59,28 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Development Server
+
+To start a development server for your Laravel application, follow these steps:
+
+1. Ensure you have [Composer](https://getcomposer.org/) and [PHP](https://www.php.net/) installed on your system.
+2. Install the project dependencies by running:
+    ```bash
+    composer install
+    ```
+3. Copy the `.env.example` file to `.env` and configure your environment variables:
+    ```bash
+    cp .env.example .env
+    ```
+4. Generate the application key:
+    ```bash
+    php artisan key:generate
+    ```
+5. Start the development server:
+    ```bash
+    php artisan serve
+    ```
+6. Open your browser and navigate to `http://localhost:8000`.
+
+You are now ready to develop your Laravel application!
