@@ -78,10 +78,10 @@ To start a development server for your Laravel application, follow these steps:
     php artisan key:generate
     ```
 
-5. 4. Generate the application key:
+5. Generate the application key:
     ```bash
         php artisan key:generate
-        ```
+    ```
 
     Ensure you are using Composer version 2.5.5 or later and PHP with SQL Server integration enabled. You can verify your Composer version by running:
     ```bash
