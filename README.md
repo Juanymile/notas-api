@@ -74,6 +74,12 @@ To start a development server for your Laravel application, follow these steps:
     cp .env.example .env
     ```
 4. Generate the application key:
+
+    Ensure you are using PHP version 8.2.7 or later and Composer version 2.5.5 or later. You can verify your PHP version by running:
+    ```bash
+    php --version
+    ```
+    If you need to install or update PHP, visit [PHP's official website](https://www.php.net/). For SQL Server integration, ensure the necessary PHP extensions (e.g., `pdo_sqlsrv`) are installed and configured.
     ```bash
     php artisan key:generate
     ```
