@@ -77,10 +77,21 @@ To start a development server for your Laravel application, follow these steps:
     ```bash
     php artisan key:generate
     ```
-5. Start the development server:
+
+5. 4. Generate the application key:
     ```bash
-    php artisan serve
+        php artisan key:generate
+        ```
+
+    Ensure you are using Composer version 2.5.5 or later and PHP with SQL Server integration enabled. You can verify your Composer version by running:
+    ```bash
+    composer --version
     ```
-6. Open your browser and navigate to `http://localhost:8000`.
+    If you need to install or update Composer, visit [Composer's official website](https://getcomposer.org/). For SQL Server integration, ensure the necessary PHP extensions (e.g., `pdo_sqlsrv`) are installed and configured.
+6. Iniciatilizate db:
+    ```bash
+    php artisan migrate
+    ```
+7. Open your browser and navigate to `http://localhost:8000`.
 
 You are now ready to develop your Laravel application!
